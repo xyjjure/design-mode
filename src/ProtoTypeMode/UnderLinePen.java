@@ -14,7 +14,7 @@ public class UnderLinePen implements Product{
         int length = s.getBytes().length;
 
         System.out.println("\""+s+"\"");
-        for(int i = 0;i<length+2;i++){
+        for(int i=0;i<length+2;i++){
             System.out.print(decoChar);
         }
         System.out.println();
