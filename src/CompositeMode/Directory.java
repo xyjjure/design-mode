@@ -1,5 +1,7 @@
 package CompositeMode;
 
+import VisitorMode.Visitor;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 
@@ -33,6 +35,10 @@ public class Directory extends Entry {
         return this;
     }
 
+    public Iterator iterator(){
+        return directory.iterator();
+    }
+
     protected void printList(String prefix){
         System.out.println(prefix + "/" + this);
         Iterator it = directory.iterator();
@@ -40,5 +46,9 @@ public class Directory extends Entry {
             Entry entry = (Entry)it.next();
             entry.printList(prefix + "/" +name);
         }
+    }
+
+    public void accept(Visitor v){
+        v.visit(this);
     }
 }

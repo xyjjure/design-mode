@@ -1,5 +1,7 @@
 package CompositeMode;
 
+import VisitorMode.Visitor;
+
 /**
  * Created by leon on 2017/7/24.
  */
@@ -22,5 +24,9 @@ public class File extends Entry {
 
     protected void printList(String prefix){
         System.out.println(prefix + "/" + this);
+    }
+
+    public void accept(Visitor v){
+        v.visit(this);
     }
 }
