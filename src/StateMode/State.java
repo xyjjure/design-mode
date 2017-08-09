@@ -1,0 +1,11 @@
+package StateMode;
+
+/**
+ * Created by leon on 2017/8/3.
+ */
+public interface State {
+    void doClock(Context context,int hour);
+    void doUse(Context context);
+    void doAlarm(Context context);
+    void doPhone(Context context);
+}
